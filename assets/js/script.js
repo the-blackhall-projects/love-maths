@@ -114,6 +114,11 @@ function displayAdditionQuestion(operand1, operand2) {
 }
 
 function displaySubtractQuestion(operand1, operand2) {
+	if (operand2 > operand1) {
+		tmp = operand2;
+		operand2 = operand1;
+		operand1 = tmp; 
+	}
 	document.getElementById('operand1').textContent = operand1;
 	document.getElementById('operand2').textContent = operand2;
 	document.getElementById('operator').textContent = "-";
